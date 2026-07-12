@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* Odoo Enterprise Color Palette */
+  --color-background: #f9f9fb;
+  --color-foreground: #212529;
+  
+  --color-primary: #714B67;
+  --color-primary-hover: #5C3D54;
+  --color-secondary: #017E84;
+  --color-secondary-hover: #016267;
+  
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-info: #17a2b8;
+
+  --color-border: #dee2e6;
+  --color-card-bg: #ffffff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Odoo-style Card */
+.glass-card, .card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.glass-card:hover, .card:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+/* Clean Enterprise Inputs */
+.input-field {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  color: var(--color-foreground);
+  transition: all 0.2s ease;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.input-field:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(113, 75, 103, 0.15);
+}
+
+/* Odoo Primary Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Text styles */
+.text-gradient {
+  color: var(--color-primary);
+}
