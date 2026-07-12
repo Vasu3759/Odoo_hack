@@ -22,32 +22,25 @@ The vision for AssetFlow is to simplify and digitize how organizations track, al
 - **Database:** PostgreSQL
 - **Language:** JavaScript
 
-## Getting Started
+## Getting Started (Evaluator Guide)
 
-1. **Start the database:**
-   ```bash
-   docker-compose up -d
-   ```
+We have created a simple startup script to automatically spin up the database, install dependencies, set up the schema, seed the data, and start the development server.
 
-2. **Install dependencies:**
+1. **Run the Startup Script:**
+   Navigate to the `assetflow` folder and run the `start.bat` script:
    ```bash
-   npm install
+   cd assetflow
+   .\start.bat
    ```
+   *(Or just double-click the `start.bat` file inside the `assetflow` folder in File Explorer!)*
 
-3. **Run database migrations:**
-   ```bash
-   npx prisma migrate dev --name init
-   ```
+2. **Access the Application:**
+   Once the server is running, open your browser and navigate to `http://localhost:3000`.
 
-4. **Seed the database (Creates Super Admin):**
-   ```bash
-   node seed.js
-   ```
-
-5. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+3. **Super Admin Credentials:**
+   The `start.bat` script automatically creates an admin user for you to test with:
+   - **Email:** `admin@gmail.com`
+   - **Password:** `admin123`
 
 ## Roles & Permissions
 
@@ -57,6 +50,12 @@ AssetFlow is designed with four strict roles, which dictate user capabilities. R
 - **Department Head:** Same as Employee, plus they can view all assets allocated to their department, approve intra-department transfers, and book resources on behalf of the department.
 - **Asset Manager:** Has global view of assets. Registers new assets, allocates them globally, and acts as the final approver for transfers, maintenance requests, returns, and audit discrepancies.
 - **Admin:** Has master control over the organizational structure. The Admin creates Departments, Asset Categories, and manages the Employee Directory. **Crucially, the Admin is the ONLY role that can promote an Employee to a Department Head or Asset Manager.**
+
+## UI Design System & Styling
+
+To maintain a consistent, premium aesthetic across the app, we used an **Odoo-inspired Design System**. All core styles are defined as CSS variables.
+- **Colors**: Dark Purple (`#714B67`), Teal (`#017E84`), Light Gray (`#F9F9F9`), Pure White (`#FFFFFF`).
+- **Features**: Glassmorphism (`glass-panel`), crisp inputs (`input-field`), and robust card layouts (`card`).
 
 ## Hackathon Submission Notes
 
