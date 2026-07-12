@@ -42,6 +42,14 @@ We have created a simple startup script to automatically spin up the database, i
    - **Email:** `admin@gmail.com`
    - **Password:** `admin123`
 
+4. **Demo Data Included:**
+   The script also seeds the database with a robust set of realistic test data so you can immediately explore the app's features:
+   - **3 Departments:** HR, Finance, IT
+   - **10 Asset Categories:** Laptops, Monitors, Keyboards, Mice, Phones, Servers, Desks, Chairs, Projectors, Vehicles
+   - **27 Employees:** 9 users per department (including roles for Department Head, Asset Manager, and regular Employees).
+     *All employee accounts use the password: `password123`*
+   - **10 Sample Assets** ready to be allocated or transferred.
+
 ## Roles & Permissions
 
 AssetFlow is designed with four strict roles, which dictate user capabilities. Role assignment is centralized and secure.
